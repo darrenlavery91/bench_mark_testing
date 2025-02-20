@@ -1,0 +1,161 @@
+Proxmox Host Memory Test
+========================
+Basic Memory Benchmark Test
+========================
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time
+
+
+Running memory speed test with the following options:
+  block size: 1024KiB
+  total size: 10240MiB
+  operation: write
+  scope: global
+
+Initializing worker threads...
+
+Threads started!
+
+Total operations: 10240 (21410.38 per second)
+
+10240.00 MiB transferred (21410.38 MiB/sec)
+
+
+General statistics:
+    total time:                          0.4769s
+    total number of events:              10240
+
+Latency (ms):
+         min:                                    0.05
+         avg:                                    0.05
+         max:                                    0.09
+         95th percentile:                        0.05
+         sum:                                  473.93
+
+Threads fairness:
+    events (avg/stddev):           10240.0000/0.00
+    execution time (avg/stddev):   0.4739/0.00
+
+
+Intermediate Memory Benchmark Test
+========================
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time
+
+
+Running memory speed test with the following options:
+  block size: 4096KiB
+  total size: 10240MiB
+  operation: write
+  scope: global
+
+Initializing worker threads...
+
+Threads started!
+
+Total operations: 2560 ( 5429.25 per second)
+
+10240.00 MiB transferred (21716.99 MiB/sec)
+
+
+General statistics:
+    total time:                          0.4701s
+    total number of events:              2560
+
+Latency (ms):
+         min:                                    0.18
+         avg:                                    0.18
+         max:                                    0.25
+         95th percentile:                        0.19
+         sum:                                  468.92
+
+Threads fairness:
+    events (avg/stddev):           2560.0000/0.00
+    execution time (avg/stddev):   0.4689/0.00
+
+
+Advanced Memory Benchmark Test
+========================
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 4
+Initializing random number generator from current time
+
+
+Running memory speed test with the following options:
+  block size: 8192KiB
+  total size: 10240MiB
+  operation: write
+  scope: global
+
+Initializing worker threads...
+
+Threads started!
+
+Total operations: 1280 ( 8394.08 per second)
+
+10240.00 MiB transferred (67152.64 MiB/sec)
+
+
+General statistics:
+    total time:                          0.1511s
+    total number of events:              1280
+
+Latency (ms):
+         min:                                    0.37
+         avg:                                    0.47
+         max:                                    0.85
+         95th percentile:                        0.75
+         sum:                                  600.61
+
+Threads fairness:
+    events (avg/stddev):           320.0000/0.00
+    execution time (avg/stddev):   0.1502/0.00
+
+
+
+Basic Stress Test on Host
+========================
+stress-ng: info:  [2964120] setting to a 60 second run per stressor
+stress-ng: info:  [2964120] dispatching hogs: 2 vm
+stress-ng: metrc: [2964120] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2964120]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2964120] vm              7164510     60.06     77.50     24.41    119295.61       70305.54
+stress-ng: info:  [2964120] successful run completed in 60.06s (1 min, 0.06 secs)
+
+Intermediate Stress Test on Host
+=============================
+stress-ng: info:  [2964628] setting to a 60 second run per stressor
+stress-ng: info:  [2964628] dispatching hogs: 4 vm
+stress-ng: metrc: [2964628] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2964628]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2964628] vm             16899100     60.08    170.46     50.78    281257.83       76383.02
+stress-ng: info:  [2964628] successful run completed in 60.11s (1 min, 0.11 secs)
+
+Advanced Stress Test on Host
+=============================
+stress-ng: info:  [2965214] setting to a 60 second run per stressor
+stress-ng: info:  [2965214] dispatching hogs: 8 vm
+stress-ng: metrc: [2965214] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2965214]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2965214] vm             11910861     60.79    316.59    118.66    195933.01       27365.36
+stress-ng: info:  [2965214] successful run completed in 64.81s (1 min, 4.81 secs)
+
+Huge Pages info
+=============================================
+AnonHugePages:   1472512 kB
+ShmemHugePages:        0 kB
+FileHugePages:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB

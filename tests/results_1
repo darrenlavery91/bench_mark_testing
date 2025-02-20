@@ -1,0 +1,12 @@
+Issue:
+Overflow: when the CPU falls behind on processing frames the decoder dumps the frames as they are no longer real time.
+
+
+Memory Performance: Host-05 is generally faster in more complex memory benchmark tests (4 threads), 
+but Host-06 performs slightly better in intermediate tests.
+
+Stress Performance: Host-06 shows better results in the basic and intermediate stress tests, 
+with higher bogo ops per second.
+
+Huge Pages: Host-05 has more anon huge pages, 
+which might give it an advantage in handling large memory pages.
