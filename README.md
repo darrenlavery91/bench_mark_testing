@@ -6,8 +6,8 @@
 This repository contains two scripts for benchmarking and stress-testing the memory of **Linux (Proxmox)** and **Windows** systems. Both scripts generate a detailed report of memory performance, stress the system under different loads, and save the results to a report file.
 
 ### Scripts Included:
-1. `linux_memory_benchmark.sh` (Linux/Proxmox)
-2. `windows_memory_benchmark.ps1` (Windows)
+1. `linux_benchmark_test.sh` (Linux/Proxmox)
+2. `windows_benchmark_test.ps1` (Windows)
 
 ## Prerequisites
 
@@ -54,17 +54,17 @@ To install Chocolatey and `stress`:
 ### Linux (Proxmox) Script
 
 1. **Clone the Repository or Download the Script**:
-   Download the `linux_memory_benchmark.sh` script to your desired location.
+   Download the `linux_benchmark_test.sh` script to your desired location.
 
 2. **Make the Script Executable**:
    ```bash
-   chmod +x linux_memory_benchmark.sh
+   chmod +x linux_benchmark_test.sh
    ```
 
 3. **Run the Script**:
    Run the script in a terminal with elevated privileges:
    ```bash
-   sudo ./linux_memory_benchmark.sh
+   sudo ./linux_benchmark_test.sh
    ```
 
 4. **Report**:
@@ -78,12 +78,12 @@ To install Chocolatey and `stress`:
 ### Windows Script
 
 1. **Clone the Repository or Download the Script**:
-   Download the `windows_memory_benchmark.ps1` script to your desired location.
+   Download the `windows_benchmark_test.ps1` script to your desired location.
 
 2. **Run the Script**:
    Run the script in **PowerShell as Administrator**:
    ```powershell
-   .\windows_memory_benchmark.ps1
+   .\windows_benchmark_test.ps1
    ```
 
 3. **Report**:
